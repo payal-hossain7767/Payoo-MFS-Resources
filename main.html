@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwin -->
+</head>
+
+<body class="bg-slate-800">
+    <header>
+        <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+            <nav class="flex justify-around items-center">
+                <img class="w-16" src="./img/Group.png" alt="">
+                <div>
+                    <h1 class="text-4xl text-bolt ">$ <span id="taka-amr">45000</span></h1>
+                    <p>avabaile</p>
+
+                </div>
+                <button class="btn btn-ghost">log-in</button>
+            </nav>
+            <section>
+               <div class="p-4">
+                <h1 class="text-4xl font-bold mt-4 mb-3">wellcome</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, aut facere pariatur nobis fugit
+                    nihil a in omnis magnam corporis.</p>
+               </div>
+                <div class="cards cursor-pointer mt-8 flex gap-4 flex-wrap justify-center">
+                    <button id="add-money-btn" class="btn btn-outline btn-info"><img src="./img/send1.png" alt=""> Add money</button>
+                    <button id="cash-out-btn" class="btn btn-outline btn-info"> <img src="./img/send1.png" alt=""> Cashout</button>
+                    <button class="btn btn-outline btn-info"> <img src="./img/send1.png" alt=""> Transfar Money</button>
+                    <button class="btn btn-outline btn-info"> <img src="./img/send1.png" alt=""> Get Bouns</button>
+                    <button class="btn btn-outline btn-info"> <img src="./img/send1.png" alt=""> Pay Bill</button>
+                    <button class="btn btn-outline btn-info"> <img src="./img/send1.png" alt=""> Transation</button>
+                </div>
+            </section>
+            <!-- add money -->
+            <section id="money-n"  >
+                <h1 class="text-xl font-bold px-4">Add Money</h1>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+
+                        <div class="card w-full max-w-sm shrink-0">
+                            <form class="card-body">
+                                <span class="label-text">Bank Account Number</span>
+                                <select class="select select-bordered select-lg w-full max-w-xs">
+                                    <option disabled selected>Select A Bank</option>
+                                    <option value="nagad">Nagad</option>
+                                    <option value="bkash">Bkash</option>
+                                    <option value="roket">Roket</option>
+                                </select>
+                                <!--  -->
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Bank Account Number</span>
+                                    </label>
+                                    <input value="01933042278" type="email" placeholder="Enter 11 digit account number"
+                                        class="input input-bordered" required />
+                                </div>
+                                <!--  -->
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span  class="label-text">Amount to Add</span>
+                                    </label>
+                                    <input id="amount-add" type="email" placeholder="Add Amount to withdraw"
+                                        class="input input-bordered" required />
+                                </div>
+                                <!--  -->
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Pin Number</span>
+                                    </label>
+                                    <input id="varifi-pin" value="1234" type="number" placeholder="Enter 4 digit pin number"
+                                        class="input input-bordered" required />
+                                    <label class="label">
+                                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="form-control mt-6">
+                                    <button id="add-money" class="btn btn-primary">Add Money</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--cashout  -->
+            <section id="cash-out" class="hidden">
+                <h1 class="text-xl font-bold px-4">Cash Out</h1>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0">
+                            <div class="card-body">
+                                <!--  -->
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Bank Account Number</span>
+                                    </label>
+                                    <input value="01933042278" type="nummber" placeholder="Enter 11 digit account number"
+                                        class="input input-bordered" required />
+                                </div>
+                                <!--  -->
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span  class="label-text">Amount to Add</span>
+                                    </label>
+                                    <input id="amount-add2" value="20000" type="number" placeholder="Add Amount to withdraw"
+                                        class="input input-bordered" required />
+                                </div>
+                                <!--  -->
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Pin Number</span>
+                                    </label>
+                                    <input id="varifi-pin2"  value="1234" type="number" placeholder="Enter 4 digit pin number"
+                                        class="input input-bordered" required />
+                                    <label class="label">
+                                        <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                    </label>
+                                </div>
+                                <!--  -->
+                                <div class="form-control mt-6">
+                                    <button id="cash-btn" class="btn btn-primary">Cash out</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </section>
+
+    </header>
+    <script src="./js/addmonay.js"></script>
+    <script src="js/loding.js"></script>
+    <script src="js/cashout.js"></script>
+</body>
+
+</html>
