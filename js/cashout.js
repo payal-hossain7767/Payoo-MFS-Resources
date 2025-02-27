@@ -10,11 +10,19 @@ document.getElementById('cash-btn').addEventListener('click',(e)=>{
  const converedTaka2=parseFloat(taka2)
  
  if(amountAdd2 && varifyPinNumber2){
+
      if(varifyPinNumber2==='1234'){
-         const kototTaka2 =  converedTaka2 - convared2;
-         document.getElementById('taka-amr').innerText=kototTaka2
+        if(converedTaka2 < amountAdd2){ 
+            alert('na hone na')
+        }
+        else{
+            const kototTaka2 =  converedTaka2 - convared2;
+            document.getElementById('taka-amr').innerText=kototTaka2
+        }
+        
        
       }
+      
      
  }
 
